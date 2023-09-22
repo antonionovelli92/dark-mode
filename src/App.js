@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import data from "./data";
 import Articolo from "./Articolo";
 
-//Funzione che se presente 'Theme' nel localStorage
-// returna il suo valore o di default return 'light-mode'
+// ! Funzione che se presente 'Theme' nel localStorage
+// ! returna il suo valore o di default return 'light-mode'
 const getFromLocalStorage = () => {
   if (localStorage.getItem('theme')) {
     return localStorage.getItem('theme');
@@ -22,7 +22,7 @@ function App() {
   };
 
 
-
+  // TODO: useEffect() serve per salvare il valore di theme nel localStorage e per attaccare la classe al html tag 
   useEffect(() => {
     //Attacco classe al html tag
     document.documentElement.className = theme;
